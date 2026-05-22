@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /blog/
+Allow: /blog/articoli/
+Disallow: /blog/assets/
+Sitemap: https://praticheflaiano.it/blog/sitemap.xml
