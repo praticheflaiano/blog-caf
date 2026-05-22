@@ -351,6 +351,90 @@ body {
 }
 .back-link:hover { text-decoration: underline; }
 
+/* === HERO BANNER === */
+.hero-banner {
+  position: relative;
+  background: url('../immagini/banner-730-2026.png') center/cover no-repeat;
+  padding: 80px 20px;
+  text-align: center;
+  color: white;
+}
+.hero-banner .hero-overlay {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  margin: 0 auto;
+}
+.hero-banner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(30, 58, 138, 0.75);
+  z-index: 1;
+}
+.hero-banner h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  line-height: 1.2;
+}
+.hero-banner p {
+  font-size: 16px;
+  opacity: 0.9;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+.hero-banner .hero-btn {
+  display: inline-block;
+  background: var(--oro);
+  color: #1e293b;
+  padding: 14px 32px;
+  border-radius: 14px;
+  font-weight: 800;
+  text-decoration: none;
+  font-size: 16px;
+  transition: .2s;
+}
+.hero-banner .hero-btn:hover {
+  background: #fbbf24;
+  transform: translateY(-2px);
+}
+
+/* === HERO IMAGE (articoli) === */
+.hero-image { margin-bottom: 20px; }
+.hero-image img { width: 100%; border-radius: 12px; box-shadow: var(--shadow-lg); }
+
+/* === MASCOT SECTION === */
+.mascot-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  max-width: 500px;
+  margin: 0 auto;
+  background: var(--blu-chiarissimo);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+.mascot-section img {
+  max-width: 120px;
+  height: auto;
+  border-radius: 50%;
+  border: 3px solid var(--oro);
+}
+.mascot-text {
+  flex: 1;
+}
+.mascot-text p {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--blu);
+  margin: 0;
+}
+
 /* === RESPONSIVE === */
 @media (max-width: 640px) {
   .article-page { padding: 20px 16px; }
