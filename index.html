@@ -8,107 +8,561 @@
 <meta name="keywords" content="blog CAF, guide fiscali, 730, ISEE, bonus 2026, invalidità, caregiver, pensioni, NASpI, successioni, IMU, Centro Pratiche Flaiano, Roma">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://praticheflaiano.it/blog">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/blog.css">
-<meta property="og:title" content="Blog Centro Pratiche Flaiano — 37 Guide Fiscali e Agevolazioni">
-<meta property="og:description" content="36 articoli professionali su 730, ISEE, bonus, invalidità, caregiver e servizi CAF. Scritto dal Centro Pratiche Flaiano di Roma.">
+<meta property="og:title" content="Blog Centro Pratiche Flaiano — 42 Guide Fiscali e Agevolazioni">
+<meta property="og:description" content="42 articoli professionali su 730, ISEE, bonus, invalidità, caregiver e servizi CAF. Scritto dal Centro Pratiche Flaiano di Roma.">
 <meta property="og:type" content="website">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Blog","name":"Blog Centro Pratiche Flaiano","description":"36 guide fiscali, bonus e agevolazioni. CAF e Patronato Roma.","url":"https://praticheflaiano.it/blog","publisher":{"@type":"Organization","name":"Centro Pratiche Flaiano — CAF e Patronato"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Blog","name":"Blog Centro Pratiche Flaiano","description":"42 guide fiscali, bonus e agevolazioni. CAF e Patronato Roma.","url":"https://praticheflaiano.it/blog","publisher":{"@type":"Organization","name":"Centro Pratiche Flaiano — CAF e Patronato"}}</script>
+<style>
+:root {
+  --blu: #1e3a8a;
+  --blu-hover: #1e40af;
+  --oro: #f59e0b;
+  --oro-hover: #fbbf24;
+  --bg: #f8fafc;
+  --card: #ffffff;
+  --txt: #1e293b;
+  --txt-mut: #64748b;
+  --border: #e2e8f0;
+  --radius: 14px;
+  --shadow: 0 2px 12px rgba(0,0,0,0.06);
+  --shadow-lg: 0 8px 32px rgba(0,0,0,0.10);
+  --max-w: 1200px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--bg);
+  color: var(--txt);
+  line-height: 1.75;
+  font-size: 16px;
+}
+
+/* === STICKY HEADER === */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: var(--card);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  transition: box-shadow 0.3s ease;
+}
+.site-header.scrolled {
+  box-shadow: 0 4px 20px rgba(30,58,138,0.12);
+}
+.header-inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: var(--txt);
+}
+.logo-icon {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, var(--blu), var(--blu-hover));
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+.logo-text {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--blu);
+}
+.logo-text span { color: var(--oro); }
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.main-nav a {
+  padding: 8px 16px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--txt-mut);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+.main-nav a:hover {
+  color: var(--blu);
+  background: #eff6ff;
+}
+.main-nav a.active {
+  color: white;
+  background: var(--blu);
+}
+
+/* === HERO SECTION === */
+.hero {
+  background: linear-gradient(135deg, var(--blu) 0%, var(--blu-hover) 100%);
+  padding: 60px 24px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(245,158,11,0.15) 0%, transparent 70%);
+  border-radius: 50%;
+}
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: -30%;
+  left: -10%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, transparent 70%);
+  border-radius: 50%;
+}
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+  margin: 0 auto;
+}
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+.hero-subtitle {
+  font-size: 18px;
+  color: rgba(255,255,255,0.85);
+  margin-bottom: 28px;
+  font-weight: 400;
+}
+.cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--oro);
+  color: #1e293b;
+  padding: 14px 28px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 15px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 14px rgba(245,158,11,0.35);
+}
+.cta-btn:hover {
+  background: var(--oro-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(245,158,11,0.45);
+}
+
+/* === FILTER NAV === */
+.filter-section {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 24px 24px 0;
+}
+.filter-pills {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.filter-pill {
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--txt-mut);
+  background: var(--card);
+  border: 1.5px solid var(--border);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: 'Inter', sans-serif;
+}
+.filter-pill:hover {
+  border-color: var(--blu);
+  color: var(--blu);
+}
+.filter-pill.active {
+  background: var(--blu);
+  color: white;
+  border-color: var(--blu);
+  box-shadow: 0 2px 8px rgba(30,58,138,0.2);
+}
+
+/* === MAIN CONTENT === */
+.main-content {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 32px 24px 60px;
+}
+
+/* === SEARCH BAR === */
+.search-container {
+  margin-bottom: 28px;
+  position: relative;
+}
+.search-container input {
+  width: 100%;
+  padding: 16px 20px 16px 52px;
+  border: 2px solid var(--border);
+  border-radius: 14px;
+  font-size: 15px;
+  font-family: 'Inter', sans-serif;
+  background: var(--card);
+  transition: all 0.2s ease;
+  box-shadow: var(--shadow);
+}
+.search-container input:focus {
+  outline: none;
+  border-color: var(--blu);
+  box-shadow: 0 0 0 4px rgba(30,58,138,0.1);
+}
+.search-container .search-icon {
+  position: absolute;
+  left: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+}
+
+/* === ARTICLE GRID === */
+.articles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 20px;
+}
+
+/* === ARTICLE CARD === */
+.article-card {
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  transition: all 0.25s ease;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  gap: 16px;
+  padding: 22px;
+  opacity: 0;
+  transform: translateY(20px);
+}
+.article-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.article-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+.card-icon {
+  font-size: 40px;
+  min-width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eff6ff;
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+.card-body {
+  flex: 1;
+  min-width: 0;
+}
+.card-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--txt);
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+.card-excerpt {
+  font-size: 14px;
+  color: var(--txt-mut);
+  line-height: 1.5;
+  margin-bottom: 12px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.card-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.cat-pill {
+  background: #eff6ff;
+  color: var(--blu);
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
+.meta-date, .meta-read {
+  font-size: 12px;
+  color: var(--txt-mut);
+}
+
+/* === NO RESULTS === */
+.no-results {
+  text-align: center;
+  padding: 60px 20px;
+  color: var(--txt-mut);
+}
+.no-results-icon {
+  font-size: 48px;
+  margin-bottom: 12px;
+}
+
+/* === CTA FOOTER === */
+.cta-section {
+  background: linear-gradient(135deg, var(--blu) 0%, var(--blu-hover) 100%);
+  border-radius: var(--radius);
+  padding: 40px;
+  text-align: center;
+  color: white;
+  margin-top: 40px;
+}
+.cta-section h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: white;
+}
+.cta-section p {
+  font-size: 14px;
+  opacity: 0.9;
+  margin-bottom: 20px;
+}
+.cta-section .cta-btn {
+  background: var(--oro);
+  color: #1e293b;
+}
+.cta-section .contact-info {
+  margin-top: 16px;
+  font-size: 13px;
+  opacity: 0.7;
+}
+
+/* === FOOTER === */
+.site-footer {
+  background: var(--blu);
+  color: white;
+  padding: 40px 24px;
+}
+.footer-inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin-bottom: 32px;
+}
+.footer-col h4 {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 16px;
+  color: var(--oro);
+}
+.footer-col p, .footer-col a {
+  font-size: 14px;
+  color: rgba(255,255,255,0.8);
+  line-height: 1.8;
+  text-decoration: none;
+  display: block;
+}
+.footer-col a:hover {
+  color: var(--oro);
+}
+.footer-bottom {
+  text-align: center;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  font-size: 13px;
+  opacity: 0.6;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .header-inner {
+    padding: 12px 16px;
+  }
+  .main-nav {
+    display: none;
+  }
+  .hero {
+    padding: 40px 16px;
+  }
+  .hero h1 {
+    font-size: 28px;
+  }
+  .hero-subtitle {
+    font-size: 16px;
+  }
+  .filter-section {
+    padding: 20px 16px 0;
+  }
+  .main-content {
+    padding: 24px 16px 40px;
+  }
+  .articles-grid {
+    grid-template-columns: 1fr;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .cta-section {
+    padding: 28px 20px;
+  }
+}
+
+/* === ANIMATIONS === */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Stats row */
+.stats-row {
+  font-size: 13px;
+  color: var(--txt-mut);
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+</style>
 </head>
 <body>
-<header class="blog-header"><div class="logo-row"><div class="logo-icon">📰</div><div class="site-name">Centro Pratiche <span>Flaiano</span></div></div><div class="tagline">Blog Ufficiale — 42 Guide Fiscali, Bonus e Agevolazioni 2026</div></header>
-<div class="hero-banner">
-  <svg class="hero-svg" viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
-    <!-- Documento/busta animato -->
-    <defs>
-      <linearGradient id="docGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" style="stop-color:#fbbf24"/>
-        <stop offset="100%" style="stop-color:#f59e0b"/>
-      </linearGradient>
-      <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" style="stop-color:#1e3a8a"/>
-        <stop offset="50%" style="stop-color:#2563eb"/>
-        <stop offset="100%" style="stop-color:#3b82f6"/>
-      </linearGradient>
-      <filter id="glow">
-        <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
-        <feMerge>
-          <feMergeNode in="coloredBlur"/>
-          <feMergeNode in="SourceGraphic"/>
-        </feMerge>
-      </filter>
-    </defs>
-    <!-- Cerchi decorativi animati -->
-    <circle cx="50" cy="50" r="30" fill="rgba(255,255,255,0.05)" class="decorative-circle">
-      <animate attributeName="r" values="30;35;30" dur="4s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="350" cy="150" r="25" fill="rgba(251,191,36,0.1)" class="decorative-circle">
-      <animate attributeName="r" values="25;30;25" dur="3s" repeatCount="indefinite"/>
-    </circle>
-    <!-- Busta/documento -->
-    <g class="doc-icon" transform="translate(150, 50)">
-      <rect x="0" y="20" width="100" height="70" rx="8" fill="url(#docGrad)"/>
-      <polygon points="0,28 50,65 100,28" fill="#d97706"/>
-      <!-- Simbolo foglio -->
-      <rect x="20" y="35" width="60" height="8" rx="2" fill="white" opacity="0.9"/>
-      <rect x="20" y="48" width="40" height="6" rx="2" fill="white" opacity="0.6"/>
-      <rect x="20" y="58" width="50" height="6" rx="2" fill="white" opacity="0.6"/>
-      <!-- SimboliCAF -->
-      <circle cx="30" cy="90" r="12" fill="#1e3a8a" opacity="0.3"/>
-      <text x="30" y="94" font-size="10" fill="white" text-anchor="middle" font-weight="bold">CAF</text>
-      <animateTransform attributeName="transform" type="translate" values="0,0; 0,-5; 0,0" dur="3s" repeatCount="indefinite"/>
-    </g>
-    <!-- Linee decorative -->
-    <line x1="100" y1="160" x2="130" y2="160" stroke="#fbbf24" stroke-width="2" opacity="0.5">
-      <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" repeatCount="indefinite"/>
-    </line>
-    <line x1="270" y1="40" x2="300" y2="40" stroke="#fbbf24" stroke-width="2" opacity="0.5">
-      <animate attributeName="opacity" values="0.5;1;0.5" dur="2.5s" repeatCount="indefinite"/>
-    </line>
-  </svg>
-  <div class="hero-overlay"><h2>Guide Fiscali 2026 Gratuite</h2><p>730, ISEE, Bonus, Invalidità, Pensioni</p><a href="https://link.arcanis.it/widget/group/bklXY9sZUszt8V2GpkU1" class="hero-btn" target="_blank">📅 Prenota un Appuntamento</a></div>
-</div>
-<nav class="blog-nav"><a href="#" class="active" data-cat="all">Tutti (42)</a><a href="#" data-cat="730">730 (6)</a><a href="#" data-cat="Bonus">Bonus (11)</a><a href="#" data-cat="Invalidità">Invalidità (4)</a><a href="#" data-cat="Famiglia">Famiglia (5)</a><a href="#" data-cat="Lavoro">Lavoro (5)</a><a href="#" data-cat="Pensione">Pensione (4)</a><a href="#" data-cat="Immobili">Immobili (3)</a><a href="#" data-cat="Assistenza">Assistenza (1)</a><a href="#" data-cat="Successioni">Successioni (1)</a><a href="#" data-cat="Guide">Guide (4)</a></nav>
 
-<main class="blog-main">
-<div class="search-bar"><span class="s-icon">🔍</span><input type="text" id="search" placeholder="Cerca nel blog (es. 730, caregiver, ISEE, bonus, NASpI...)" oninput="filter()"></div>
-<div class="stats-row" id="stats"></div>
-<div class="article-list" id="list"></div>
+<!-- STICKY HEADER -->
+<header class="site-header" id="header">
+  <div class="header-inner">
+    <a href="#" class="logo">
+      <div class="logo-icon">📋</div>
+      <div class="logo-text">Centro Pratiche <span>Flaiano</span></div>
+    </a>
+    <nav class="main-nav">
+      <a href="#" class="active">Home</a>
+      <a href="#">730</a>
+      <a href="#">Bonus</a>
+      <a href="#">Pensione</a>
+      <a href="#">Guide</a>
+    </nav>
+  </div>
+</header>
 
-<div class="cta-footer" style="margin-top:32px;"><h3>🤝 Hai bisogno di aiuto con una pratica?</h3><p style="opacity:0.9;font-size:14px;">I nostri operatori CAF e Patronato ti accompagnano dalla verifica requisiti alla domanda.</p><a href="https://link.arcanis.it/widget/group/bklXY9sZUszt8V2GpkU1" class="cta-btn" target="_blank">📅 Prenota un Appuntamento</a><p style="margin-top:10px;opacity:0.7;font-size:12px;">📍 Via Filoteo Alberini 25 — 00139 Roma — info@praticheflaiano.it</p></div>
-<div class="mascot-section">
-  <svg class="mascot-icon" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-    <!-- Sfondo cerchio -->
-    <circle cx="60" cy="60" r="55" fill="#eff6ff" stroke="#f59e0b" stroke-width="3"/>
-    <!-- Corpo mascot (pennino stilizzato) -->
-    <g transform="translate(60, 60)">
-      <!-- Pennino stilizzato CAF -->
-      <ellipse cx="0" cy="5" rx="25" ry="30" fill="#1e3a8a"/>
-      <ellipse cx="0" cy="-10" rx="18" ry="22" fill="#2563eb"/>
-      <!-- Occhi friendly -->
-      <circle cx="-8" cy="-5" r="5" fill="white"/>
-      <circle cx="8" cy="-5" r="5" fill="white"/>
-      <circle cx="-7" cy="-4" r="2.5" fill="#1e3a8a"/>
-      <circle cx="9" cy="-4" r="2.5" fill="#1e3a8a"/>
-      <!-- Sorriso -->
-      <path d="M-10,8 Q0,18 10,8" stroke="white" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-      <!-- Onde CAF stylizzate -->
-      <path d="M-20,25 Q-10,20 0,25 Q10,30 20,25" stroke="#f59e0b" stroke-width="3" fill="none" stroke-linecap="round"/>
-    </g>
-    <!-- Elemento decorativo - stella -->
-    <g transform="translate(95, 25)">
-      <polygon points="10,0 12,7 20,7 14,12 16,20 10,15 4,20 6,12 0,7 8,7" fill="#f59e0b">
-        <animate attributeName="opacity" values="1;0.6;1" dur="2s" repeatCount="indefinite"/>
-      </polygon>
-    </g>
-    <!-- Onda decorativa -->
-    <path d="M15,90 Q30,85 45,90 Q60,95 75,90 Q90,85 105,90" stroke="#1e3a8a" stroke-width="2" fill="none" opacity="0.3">
-      <animate attributeName="d" values="M15,90 Q30,85 45,90 Q60,95 75,90 Q90,85 105,90;M15,92 Q30,87 45,92 Q60,97 75,92 Q90,87 105,92;M15,90 Q30,85 45,90 Q60,95 75,90 Q90,85 105,90" dur="3s" repeatCount="indefinite"/>
-    </path>
-  </svg>
-  <div class="mascot-text"><p>Flaianino ti dà il benvenuto!</p></div>
-</div>
-<div style="text-align:center;padding:16px;font-size:12px;color:#64748b;">© 2026 Centro Pratiche Flaiano — CAF e Patronato Roma</div>
+<!-- HERO SECTION -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>Centro Pratiche Flaiano — Guide Fiscali e Bonus</h1>
+    <p class="hero-subtitle">42 guide professionali per orientarti nel 2026</p>
+    <a href="https://link.arcanis.it/widget/group/bklXY9sZUszt8V2GpkU1" class="cta-btn" target="_blank">
+      📅 Prenota Appuntamento
+    </a>
+  </div>
+</section>
+
+<!-- FILTER NAV -->
+<section class="filter-section">
+  <div class="filter-pills" id="filterPills">
+    <button class="filter-pill active" data-cat="all">Tutti (42)</button>
+    <button class="filter-pill" data-cat="730">730 (6)</button>
+    <button class="filter-pill" data-cat="Bonus">Bonus (11)</button>
+    <button class="filter-pill" data-cat="Pensione">Pensione (4)</button>
+    <button class="filter-pill" data-cat="Immobili">Immobili (3)</button>
+    <button class="filter-pill" data-cat="Lavoro">Lavoro (5)</button>
+    <button class="filter-pill" data-cat="Guide">Guide (4)</button>
+    <button class="filter-pill" data-cat="Assistenza">Assistenza (1)</button>
+  </div>
+</section>
+
+<!-- MAIN CONTENT -->
+<main class="main-content">
+  <div class="search-container">
+    <span class="search-icon">🔍</span>
+    <input type="text" id="searchInput" placeholder="Cerca nel blog (es. 730, caregiver, ISEE, bonus...)">
+  </div>
+  <div class="stats-row" id="statsRow">42 articoli</div>
+  <div class="articles-grid" id="articlesGrid"></div>
 </main>
+
+<!-- CTA FOOTER -->
+<section class="main-content">
+  <div class="cta-section">
+    <h3>🤝 Hai bisogno di aiuto con una pratica?</h3>
+    <p>I nostri operatori CAF e Patronato ti accompagnano dalla verifica requisiti alla domanda.</p>
+    <a href="https://link.arcanis.it/widget/group/bklXY9sZUszt8V2GpkU1" class="cta-btn" target="_blank">
+      📅 Prenota un Appuntamento
+    </a>
+    <p class="contact-info">📍 Via Filoteo Alberini 25 — 00139 Roma — info@praticheflaiano.it</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>Info</h4>
+        <p>Centro Pratiche Flaiano<br>CAF e Patronato a Roma Vigne Nuove</p>
+        <p style="margin-top: 8px;">📍 Via Filoteo Alberini 25<br>00139 Roma</p>
+      </div>
+      <div class="footer-col">
+        <h4>Link</h4>
+        <a href="#">Home</a>
+        <a href="#">730</a>
+        <a href="#">Bonus</a>
+        <a href="#">Pensione</a>
+        <a href="#">Guide</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contatti</h4>
+        <p>✉️ info@praticheflaiano.it</p>
+        <p style="margin-top: 8px;">Orari: Lun-Ven 9:00-18:00</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © 2026 Centro Pratiche Flaiano — CAF e Patronato Roma
+    </div>
+  </div>
+</footer>
 
 <script>
 const articles = [
@@ -147,7 +601,7 @@ const articles = [
   {slug:"caregiver-familiare-2026",title:"Caregiver Familiare 2026: Bonus, Permessi e Agevolazioni",desc:"Guida completa bonus caregiver, permessi Legge 104, congedo e agevolazioni INPS.",cat:"Assistenza",date:"21 Mag 2026",read:"12 min",icon:"🤲"},
   {slug:"successione-ereditaria-roma",title:"Successione Ereditaria a Roma: Guida e Servizio Completo",desc:"Successione: calcolo imposte, dichiarazione, voltura. Servizio chiavi in mano a Roma.",cat:"Successioni",date:"21 Mag 2026",read:"7 min",icon:"📜"},
   {slug:"vademecum-caf-patronato",title:"Vademecum 2026: Guida Completa ai Servizi CAF e Patronato",desc:"Tutti i servizi CAF e Patronato in un unico vademecum: documenti e bonus.",cat:"Guide",date:"21 Mag 2026",read:"10 min",icon:"📋"},
-  {slug:"decreto-fiscale-2026",title:"📢 Decreto Fiscale 2026 (DL 38): Rottamazione, Concordato e Nuove Tasse",desc:"DL 38 approvato: rottamazione quinquies estesa, soglia 5.000€ professionisti PA, concordato al 2/11, tassa pacchi.",cat:"Guide",date:"22 Mag 2026",read:"7 min",icon:"📜"},
+  {slug:"decreto-fiscale-2026",title:"Decreto Fiscale 2026 (DL 38): Rottamazione, Concordato e Nuove Tasse",desc:"DL 38 approvato: rottamazione quinquies estesa, soglia 5.000€ professionisti PA, concordato al 2/11, tassa pacchi.",cat:"Guide",date:"22 Mag 2026",read:"7 min",icon:"📜"},
   {slug:"rottamazione-cartelle-2026",title:"Rottamazione Quinquies 2026: Guida alla Definizione Agevolata",desc:"Rottamazione cartelle: scadenza, adesione, rateazione e debiti inclusi.",cat:"Guide",date:"21 Mag 2026",read:"4 min",icon:"📑"},
   {slug:"fringe-benefit-2026",title:"Fringe Benefit 2026: Voucher, Buoni Spesa e soglia 1.000€",desc:"Fringe benefit 2026: voucher 500€, buoni spesa, soglia 1.000€ per figli. Guida completa a cosa rientra e come gestirli.",cat:"Lavoro",date:"22 Mag 2026",read:"6 min",icon:"🎁"},
   {slug:"pensione-integrativa-tfr-2026",title:"TFR in Bustapaga vs Fondo Pensione: Cosa Conviene nel 2026",desc:"TFR in busta paga o fondo pensione? Confronto vantaggi, scadenze opt-in e benefici fiscali.",cat:"Pensione",date:"22 Mag 2026",read:"7 min",icon:"💰"},
@@ -158,45 +612,76 @@ const articles = [
 
 let currentCat = 'all';
 
+// Render articles
 function render(filtered) {
-  document.getElementById('list').innerHTML = filtered.length ? filtered.map(a => `
-    <a href="articoli/${a.slug}.html" class="article-card animate-slideUp">
-      <div class="card-icon">${a.icon}</div>
-      <div class="card-body">
-        <h3>${a.title}</h3>
-        <p class="excerpt">${a.desc}</p>
-        <div class="meta"><span class="cat">${a.cat}</span><span class="date">${a.date}</span><span class="read-time">⏱️ ${a.read}</span></div>
-      </div>
-    </a>`).join('') : '<div style="text-align:center;padding:60px 20px;color:#64748b;" class="animate-fadeIn"><div style="font-size:48px;margin-bottom:12px;">🔍</div>Nessun articolo trovato.</div>';
-  document.getElementById('stats').textContent = `${filtered.length} articoli`;
+  const grid = document.getElementById('articlesGrid');
+  if (filtered.length === 0) {
+    grid.innerHTML = `
+      <div class="no-results">
+        <div class="no-results-icon">🔍</div>
+        <p>Nessun articolo trovato.</p>
+      </div>`;
+  } else {
+    grid.innerHTML = filtered.map(a => `
+      <a href="articoli/${a.slug}.html" class="article-card">
+        <div class="card-icon">${a.icon}</div>
+        <div class="card-body">
+          <h3 class="card-title">${a.title}</h3>
+          <p class="card-excerpt">${a.desc}</p>
+          <div class="card-meta">
+            <span class="cat-pill">${a.cat}</span>
+            <span class="meta-date">${a.date}</span>
+            <span class="meta-read">⏱️ ${a.read}</span>
+          </div>
+        </div>
+      </a>`).join('');
+  }
+  document.getElementById('statsRow').textContent = `${filtered.length} articoli`;
+  
+  // Trigger scroll animation for cards
+  setTimeout(() => {
+    document.querySelectorAll('.article-card').forEach((card, index) => {
+      setTimeout(() => {
+        card.classList.add('visible');
+      }, index * 50);
+    });
+  }, 100);
 }
 
+// Filter function
 function filter() {
-  const q = document.getElementById('search').value.toLowerCase();
+  const q = document.getElementById('searchInput').value.toLowerCase();
   let f = articles;
   if (currentCat !== 'all') f = f.filter(a => a.cat === currentCat);
   if (q.length > 1) f = f.filter(a => a.title.toLowerCase().includes(q) || a.desc.toLowerCase().includes(q) || a.cat.toLowerCase().includes(q));
   render(f);
 }
 
-document.querySelectorAll('.blog-nav a').forEach(link => {
-  link.addEventListener('click', e => {
-    e.preventDefault();
-    document.querySelectorAll('.blog-nav a').forEach(l => l.classList.remove('active'));
-    link.classList.add('active');
-    currentCat = link.dataset.cat;
-    document.getElementById('search').value = '';
+// Filter pill click handlers
+document.querySelectorAll('.filter-pill').forEach(pill => {
+  pill.addEventListener('click', () => {
+    document.querySelectorAll('.filter-pill').forEach(p => p.classList.remove('active'));
+    pill.classList.add('active');
+    currentCat = pill.dataset.cat;
+    document.getElementById('searchInput').value = '';
     filter();
   });
 });
 
-const urlParams = new URLSearchParams(window.location.search);
-const catParam = urlParams.get('cat');
-if (catParam) {
-  currentCat = catParam;
-  document.querySelectorAll('.blog-nav a').forEach(l => { l.classList.remove('active'); if (l.dataset.cat === catParam) l.classList.add('active'); });
-}
+// Search input handler
+document.getElementById('searchInput').addEventListener('input', filter);
 
+// Sticky header shadow on scroll
+window.addEventListener('scroll', () => {
+  const header = document.getElementById('header');
+  if (window.scrollY > 10) {
+    header.classList.add('scrolled');
+  } else {
+    header.classList.remove('scrolled');
+  }
+});
+
+// Initial render
 render(articles);
 </script>
 </body>
